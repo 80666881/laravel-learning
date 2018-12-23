@@ -38,5 +38,9 @@ Route::get('/about','SitesController@about');
 
 Route::get('/contact','SitesController@contact');
 
-//文章列表
+//全部文章列表
 Route::get('/articles','ArticlesController@index');
+//获取某篇文章,{id}等同koa的:id
+Route::get('/articles/{id}','ArticlesController@show');
+
+
