@@ -33,3 +33,7 @@ Route::get('/', function () {
 //快速创建controller方法
 //php artisan make:controller SitesController
 Route::get('/site','SitesController@index');//@表示调用index函数
+
+Route::get('/about','SitesController@about');
+
+Route::get('/contact','SitesController@contact');

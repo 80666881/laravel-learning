@@ -1,17 +1,14 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    about me
+@extends('app')
+
+@section('content')
+    @if($firstName == 'zeller')
+        <h1>about me {{$firstName}}{{$lastName}}</h1>
+    @else
+        <h1>else</h1>
+    @endif
+
     <hr>
-    <div>使用compact方法</div>
-    <hr>
-    {{$firstName}}.{{$lastName}}
-</body>
-</html>
+    @foreach($people as $person)
+        <li>{{$person}}</li>
+    @endforeach
+@stop
