@@ -37,3 +37,6 @@ Route::get('/site','SitesController@index');//@表示调用index函数
 Route::get('/about','SitesController@about');
 
 Route::get('/contact','SitesController@contact');
+
+//文章列表
+Route::get('/articles','ArticlesController@index');

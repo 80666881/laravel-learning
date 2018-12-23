@@ -8,10 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-app.blade.php
 {{--yield表示区域--}}
 <p class="section">
-    content area
     @yield('content')
     @yield('footer')
 </p>
