@@ -40,7 +40,15 @@ Route::get('/contact','SitesController@contact');
 
 //全部文章列表
 Route::get('/articles','ArticlesController@index');
+
+//创建一篇文章
+Route::get('/articles/create','ArticlesController@create');
+
 //获取某篇文章,{id}等同koa的:id
 Route::get('/articles/{id}','ArticlesController@show');
+
+//提交文章
+Route::post('/articles','ArticlesController@store');
+
 
 
