@@ -50,5 +50,7 @@ Route::get('/articles/{id}','ArticlesController@show');
 //提交文章
 Route::post('/articles','ArticlesController@store');
 
+//编辑文章
+Route::get('/articles/{id}/edit','ArticlesController@edit');
 
 
