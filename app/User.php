@@ -23,4 +23,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function articles(){
+        //这是表示让user调用articles方法，所以函数名可以任意
+        //$user->articles
+        return $this->hasMany('App\Article');
+    }
 }

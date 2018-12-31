@@ -10,16 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/', function () {
-    //存放在resources/views/下，一般都是blade模板引擎
-    //return view('welcome');
-
-//    $name = '<h1>jelly</h1>';
-    //文件夹下的某个网页，可以用sites.about或者sites/about
-    //return view('sites/about');
-//    return view('sites.about')->with('name',$name);
-
     $firstName = 'zeller';
     $lastName = 'atom';
     //使用compact传递
