@@ -38,20 +38,18 @@ Route::get('/about','SitesController@about');
 
 Route::get('/contact','SitesController@contact');
 
-////全部文章列表
-//Route::get('/articles','ArticlesController@index');
-//
-////创建一篇文章
-//Route::get('/articles/create','ArticlesController@create');
-//
-////获取某篇文章,{id}等同koa的:id
-//Route::get('/articles/{id}','ArticlesController@show');
-//
-////提交文章
-//Route::post('/articles','ArticlesController@store');
-//
-////编辑文章
-//Route::get('/articles/{id}/edit','ArticlesController@edit');
-
 //使用resource方法注册路由
 Route::resource('articles','ArticlesController');
+
+//@登录注册路由
+//登录表单
+Route::get('auth/login','Auth\AuthController@getLogin');
+//验证登录
+Route::post('auth/login','Auth\AuthController@postLogin');
+//注册表单
+Route::get('auth/register','Auth\AuthController@getRegister');
+//验证注册
+Route::post('auth/register','Auth\AuthController@postRegister');
+//退出登录
+Route::get('auth/logout','Auth\AuthController@getLogout');
+
